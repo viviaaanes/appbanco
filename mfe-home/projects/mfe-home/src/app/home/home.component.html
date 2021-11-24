@@ -1,0 +1,43 @@
+<html lang="pt-br">
+
+<body>
+    <!-- Main navigation -->
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#f67d06;">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/imagens/logo01.png" alt="" width="60" height="55">
+                </a>
+            </div>
+        </nav>
+        <!-- Full Page Intro -->
+        <div class="view" style="background-image: url('../assets/imagens/fundo03.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Content -->
+            <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                        <div class="card d-flex justify-content-center align-items-center">
+                            <div class="card-body">
+                                <h4 class="h4-responsive font-weight-bold mt-sm-5">Abra sua conta e venha para o Itaú </h4>
+                                <hr class="hr-light">
+                                <form class="col md-5" (ngSubmit)="login()" #loginForm="ngForm">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Digite o seu CPF" [(ngModel)]="cpf" name="cpf" #campoCpf="ngModel" [class.is-invalid]="!campoCpf.valid && campoCpf.touched" required>
+                                        <app-mensagem *ngIf="campoCpf.invalid && campoCpf.touched" mensagem="CPF obrigatório."></app-mensagem>
+                                        <button type="submit" class="btn btn-primary btn-block" [disabled]="loginForm.invalid">Abra sua conta</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

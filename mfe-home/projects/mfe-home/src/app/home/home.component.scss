@@ -1,0 +1,35 @@
+.navbar {
+    color: #f67d06;
+}
+
+.view {
+    min-height: 100vh;
+}
+
+.card {
+    width: 29rem;
+    height: 18rem;
+    margin-top: 50px;
+    display: flex;
+    background-color: #e9d9d954;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 25rem;
+    align-items: center;
+}
+
+.btn {
+    width: 25rem;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #f67d06;
+    border: #f67d06;
+}

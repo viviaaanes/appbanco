@@ -1,0 +1,44 @@
+.navbar {
+    color: #f67d06;
+}
+
+.view {
+    min-height: 100vh;
+}
+
+.card {
+    width: 24rem;
+    height: 18rem;
+    margin-top: 50px;
+    display: flex;
+    background-color: #e9d9d954;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.form-group {
+    display: flexbox;
+    align-self: auto;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    background-color: #f67d06;
+    border: 1px solid #f67d06;
+    padding: 6px 12px;
+    cursor: pointer;
+    color: #FFFF;
+    border-radius: 5px;
+    align-items: center;
+    margin: 5px;
+}
+
+.btn {
+    background-color: #f67d06;
+    border: 1px solid #f67d06;
+    padding: 6px 12px;
+    margin: 0px 5px 4px 5px;
+}

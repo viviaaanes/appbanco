@@ -1,0 +1,90 @@
+<html lang="pt-br">
+
+<body>
+    <header>
+        <nav class="navbar navbar-light" style="background-color: #f67d06;">
+            <div class="container">
+                <a class="navbar-brand " href="#">
+                    <img src="../assets/imagens/logo01.png" alt="" width="60" height="55">
+                </a>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h4 class="h4-responsive font-weight-bold mt-sm-5">Preencha o formulário de cadastro</h4>
+            <hr class="hr-light">
+            <div class="row">
+                <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()" #cadastroForm="ngForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nome">Nome</label>
+                            <input formControlName="nome" type="text" name="nome" placeholder="Nome completo" class="form-control" id="nome" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input formControlName="email" type="email" name="email" placeholder="email@email.com" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="cpf">CPF</label>
+                            <input formControlName="cpf" type="text" name="cpf" class="form-control" id="cpf" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="senha">Senha</label>
+                            <input formControlName="senha" type="password" name="senha" class="form-control" id="senha" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="telefone">Telefone</label>
+                            <input formControlName="telefone" type="tel" name="telefone" class="form-control" id="telefone" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="datanasc">Data de Nascimento</label>
+                            <input formControlName="datanasc" type="text" name="datanasc" class="form-control" id="datanasc" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="datacadastro">Data de Cadastro</label>
+                            <input formControlName="datacadastro" type="text" name="datacadastro" class="form-control" id="datacadastro" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="salario">Salário Mensal</label>
+                            <input formControlName="salario" type="text" name="salario" class="form-control" id="salario" required>
+                        </div>
+
+                        <div class="row" formGroupName="endereco">
+                            <div class="form-group col-md-6">
+                                <label for="rua">Rua</label>
+                                <input formControlName="rua" type="text" name="rua" class="form-control" id="rua" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="numero">Número</label>
+                                <input formControlName="numero" type="number" name="numero" class="form-control" id="numero" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="cep">CEP</label>
+                                <input formControlName="cep" type="text" name="cep" class="form-control" id="cep" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="bairro">Bairro</label>
+                                <input formControlName="bairro" type="text" name="bairro" class="form-control" id="bairro" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="cidade">Cidade</label>
+                                <input formControlName="cidade" type="text" name="cidade" class="form-control" id="cidade" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="estado">Estado</label>
+                                <input formControlName="estado" type="text" name="estado" class="form-control" id="estado" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-12 d-flex justify-content-center align-items-center">
+                            <button type="submit" class="btn btn-primary" [disabled]="cadastroForm.invalid">Enviar</button>
+                            <button type="reset" class="btn btn-primary">Limpar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
